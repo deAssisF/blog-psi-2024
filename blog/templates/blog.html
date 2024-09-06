@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+    {% block content %}
+         <section id="blog-container">
+            <div class="blogs">
+                {% for post in posts %}
+                <div class="post">
+                    <img src="{{ post.image }}" alt="">
+                    <h3>{{ post.titulo }}</h3>
+                    <p>{{ post.descricao }}</p>
+                    <a href="https://www.youtube.com/live/wQU5CJpzw38?si=TM4VL8xlBzYD0Sxa" target="_blank">Vídeo sobre o assunto</a>
+        
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="cate">
+                <h2>Fontes</h2>
+                <hr>
+                <a href="https://jornal.usp.br/campus-ribeirao-preto/tecnologias-interativas-podem-contribuir-na-conscientizacao-de-jovens-sobre-sexo-seguro/" target="_blank">Jornal da USP</a>
+                <hr>
+                <a href="https://brasil.un.org/pt-br/149621-fundo-de-popula%C3%A7%C3%A3o-da-onu-amplia-acesso-servi%C3%A7os-de-sa%C3%BAde-sexual-e-reprodutiva-no-par%C3%A1" target="_blank">Nações Unidas Brasil</a>
+                <hr>
+                <a href="https://medium.com/casahacker/a-cultura-do-descarte-impactos-da-pornografia-digital-40e5a46c809d" target="_blank">Medium</a>
+                <hr>
+                <a href="https://www.jusbrasil.com.br/artigos/a-pornografia-de-vinganca-e-os-desafios-da-protecao-da-privacidade-online/407311374" target="_blank">Jus Brasil</a>
+                <hr>
+            </div>
+
+         </section>
+
+
+        <!-- Footer -->
+
+        <footer>
+            <div class="copyrigth">
+                <p>Copyrigth 2024 Todos os direitos reservados a Turma de Infoweb3M</p>
+                <div class="pro-links">
+                    <i class="fab fa-facebook"></i>
+                    <a href="https://www.instagram.com/infoweb_2022/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+            {%endblock content%}
