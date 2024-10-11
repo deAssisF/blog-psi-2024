@@ -26,5 +26,9 @@ def contact(request):
         }
     return render(request, "contact.html", context)
 
-def post(resquest):
-    return render(resquest, "post.html")
+def post(resquest, id):
+    post = Post.objects.get(pk=id)
+    context = {
+         "post": post,
+    }
+    return render(resquest, "post.html", context)

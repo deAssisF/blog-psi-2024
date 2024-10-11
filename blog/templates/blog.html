@@ -18,7 +18,7 @@
                             <img src="{% static 'placeholder.jpg' %}" alt="">
                         {% endif %}
                         
-                        <h3>{{ post.titulo }}</h3>
+                        <h3>  <a class="blue" href="{% url 'post' id=post.id %}">{{post.titulo}}</a></h3>
                         <p>{{ post.descricao }}</p>
                         <a href="https://www.youtube.com/live/wQU5CJpzw38?si=TM4VL8xlBzYD0Sxa" target="_blank">Vídeo sobre o assunto</a>
                     </div>
